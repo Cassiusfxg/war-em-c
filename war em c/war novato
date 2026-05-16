@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <string.h>
+
+//Declaração da instrução continente
+typedef struct {
+	char nome[50];
+	char cor[50];
+	int num;
+} territorio;
+
+int main()
+{
+	territorio continente[5];
+	int in;
+	printf("===WAR===\n");
+	printf("Cadrastre o nome e os dados do continente como se pede...\n");
+
+	//Entrada de dados
+
+	for(in=0; in<5; in++) {
+
+		printf("Nome do continente %i: ",in+1);
+		scanf("%s",continente[in].nome);
+		printf("cor: ");
+		scanf("%s",continente[in].cor);
+		printf("Número de exércitos: ");
+		scanf("%i",&continente[in].num);
+		printf("\n");
+	};
+	//Print dos dados
+	for(in=0; in<5; in++) {
+		printf("---%s---\n",continente[in].nome);
+		printf("---%s---\n",continente[in].cor);
+		printf("---%i---\n\n",continente[in].num);
+	}
+
+	return 0;
+}
